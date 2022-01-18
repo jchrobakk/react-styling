@@ -1,17 +1,15 @@
 // ./src/components/App.js
 import React from 'react';
-import Row from './Row';
+import LoginPanel from './LoginPanel';
+import GlobalStyle from './styled/GlobalStyle';
+import ResetStyle from './styled/ResetStyle';
 
-import Logo from '../images/logo.png';
+const App = () => (
+	<>
+		<ResetStyle />
+		<GlobalStyle />
+		<LoginPanel />
+	</>
+);
 
-export default class App extends React.Component {
-	render() {
-		return (
-			<>
-				<img src={Logo} alt="" />
-				<Row type="dark" />
-				<Row space="medium" />
-			</>
-		);
-	}
-}
+export default App;

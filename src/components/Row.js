@@ -1,15 +1,11 @@
 import React from 'react';
-import classNames from 'classnames';
-
-import './../scss/Row.scss';
-
-export default function Row(props) {
-	const { type, space } = props;
-
-	const className = classNames('Row', {
-		[`Row--${type}`]: type,
-		[`Row--space-${space}`]: space,
-	});
-
-	return <div className={className}>React: Styling</div>;
-}
+import StyledRow from './styled/Row';
+const Row = ({ style = {}, type }) => {
+	return (
+		<StyledRow style={style} type={type}>
+			<h1>React: Styled Components</h1>
+			<p>Lorem ipsum dolor sit amet.</p>
+		</StyledRow>
+	);
+};
+export default Row;

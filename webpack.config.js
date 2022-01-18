@@ -16,7 +16,7 @@ module.exports = function (env = {}) {
 		// definiuje plik wejściowy
 		mode: isProd ? 'production' : 'development',
 		// definiuje tryb pracy webpack-a
-		devtool: isProd ? 'none' : 'eval-cheap-module-source-map',
+		devtool: isProd ? false : 'eval-cheap-module-source-map',
 		// definiuje identyfikację kodu źródłowego
 		output: {
 			path: path.resolve(__dirname, 'build'),
